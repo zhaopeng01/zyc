@@ -22,7 +22,7 @@ public class OneJob implements Job {
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         try {
             Thread.sleep(6000);
-            System.out.println("*********************1");
+            System.out.println("我是onejob");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

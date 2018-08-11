@@ -7,6 +7,6 @@ import org.quartz.JobExecutionException;
 public class TwoJob implements Job {
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        System.out.println("#######################2");
+        System.out.println("我是twojob");
     }
 }
