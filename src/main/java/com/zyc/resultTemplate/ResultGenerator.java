@@ -1,5 +1,7 @@
 package com.zyc.resultTemplate;
 
+import java.util.Date;
+
 /**
  * @author zhaopeng
  * @Description: 结果
@@ -11,9 +13,7 @@ public class ResultGenerator {
 
 
     public static Result successResult() {
-        return new Result()
-                .setCode(ResultCodeEnum.SUCCESS)
-                .setMessage(DEFAULT_SUCCESS_MESSAGE);
+        return successResult(new Date());
     }
 
     public static <T> Result<T> successResult(T data) {
