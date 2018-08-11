@@ -7,6 +7,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
+@MapperScan("com.zyc.mapper")
 public class ZycApplication {
 
     public static void main(String[] args) {

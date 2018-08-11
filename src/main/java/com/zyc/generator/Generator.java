@@ -13,7 +13,7 @@ public class Generator {
     public static void main(String[] args) {
         String packageName = "com.zyc";
         boolean serviceNameStartWithI = false;//auth -> UserService, 设置成true: auth -> IUserService
-        generateByTables(serviceNameStartWithI, packageName, "zyc", "zyc", "user");
+        generateByTables(serviceNameStartWithI, packageName, "zyc", "zyc", "qrtz_task");
 
         System.out.println("completed...");
     }
