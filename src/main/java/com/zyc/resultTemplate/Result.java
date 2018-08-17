@@ -7,19 +7,19 @@ package com.zyc.resultTemplate;
  * @date 2018/8/10 15:03
  */
 public class Result<T> {
-    private ResultCodeEnum code;
+    private Integer code;
     private String message;
     private T data;
 
-    public ResultCodeEnum getCode() {
+    public Integer getCode() {
         return code;
     }
 
     public Result() {
     }
 
-    public Result setCode(ResultCodeEnum resultCode) {
-        this.code = resultCode;
+    public Result setCode(Integer code) {
+        this.code = code;
         return this;
     }
 

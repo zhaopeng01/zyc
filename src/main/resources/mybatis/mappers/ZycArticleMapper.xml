@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyc.mapper.ZycArticleMapper">
+    <!--获取首页列表-->
+    <select id="getDocList" resultType="com.zyc.entity.ZycArticle">
+        SELECT
+			id,
+			title,
+			citation,
+			type,
+			tag,
+			create_time
+		FROM
+			`zyc_article`
+		WHERE
+			`status` = 1
+		LIMIT 0,
+		 10;
+    </select>
+    <!--获取右侧列表-->
+    <select id="getRightDocList" resultType="com.zyc.entity.ZycArticle">
+       SELECT
+			id,
+			title,
+			found,
+			image
+		FROM
+			`zyc_article`
+		GROUP BY id DESC
+		LIMIT 0,5
+    </select>
+	<!--获取右侧随机列表-->
+	<select id="getRightRandDocList" resultType="com.zyc.entity.ZycArticle">
+       SELECT
+			id,
+			title,
+			found,
+			image
+		FROM
+			`zyc_article`
+		GROUP BY rand()
+		LIMIT 0,5
+    </select>
+
+</mapper>

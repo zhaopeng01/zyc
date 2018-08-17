@@ -18,20 +18,20 @@ public class ResultGenerator {
 
     public static <T> Result<T> successResult(T data) {
         return new Result()
-                .setCode(ResultCodeEnum.SUCCESS)
+                .setCode(ResultCodeEnum.SUCCESS.getCode())
                 .setMessage(DEFAULT_SUCCESS_MESSAGE)
                 .setData(data);
     }
 
     public static Result failResult(String message) {
         return new Result()
-                .setCode(ResultCodeEnum.FAIL)
+                .setCode(ResultCodeEnum.FAIL.getCode())
                 .setMessage(message);
     }
 
     public static Result unauthorizedResult() {
         return new Result()
-                .setCode(ResultCodeEnum.UNAUTHORIZED)
+                .setCode(ResultCodeEnum.UNAUTHORIZED.getCode())
                 .setMessage("权限不足！");
     }
 }

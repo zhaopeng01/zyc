@@ -1,49 +1,58 @@
 package com.zyc.entity;
 
 public class DemoUser {
-    private Long id;
-    private String name;
-    private Integer age;
 
-    public DemoUser() {
-    }
+    private long id;
+    private String title;
+    private Integer found;
+    private String photo;
 
-    public DemoUser(Long id, String name, Integer age) {
+    public DemoUser(long id, String title, Integer found, String photo) {
         this.id = id;
-        this.name = name;
-        this.age = age;
+        this.title = title;
+        this.found = found;
+        this.photo = photo;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getFound() {
+        return found;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setFound(Integer found) {
+        this.found = found;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     @Override
     public String toString() {
         return "DemoUser{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
+                ", title='" + title + '\'' +
+                ", found=" + found +
+                ", photo='" + photo + '\'' +
                 '}';
     }
 }
