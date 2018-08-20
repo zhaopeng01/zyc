@@ -68,7 +68,7 @@ public class ZycArticleServiceImpl extends ServiceImpl<ZycArticleMapper, ZycArti
     * @Description: 获取右侧随机列表
     * @author zhaopeng
     * @email zp152527@163.com
-    * @date 2018/8/17 16:22 
+    * @date 2018/8/17 17:43
     *
     */
     @Override

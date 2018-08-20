@@ -1,5 +1,7 @@
 package com.zyc.resultTemplate;
 
+import java.util.Date;
+
 /**
  * @author zhaopeng
  * @Description: 返回结果实体
@@ -10,6 +12,16 @@ public class Result<T> {
     private Integer code;
     private String message;
     private T data;
+    private Date resultDate;
+
+    public Date getResultDate() {
+        return resultDate;
+    }
+
+    public Result setResultDate(Date resultDate) {
+        this.resultDate = resultDate;
+        return this;
+    }
 
     public Integer getCode() {
         return code;

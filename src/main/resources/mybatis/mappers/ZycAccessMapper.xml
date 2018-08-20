@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyc.mapper.ZycAccessMapper">
+    <!--查询访问量-->
+    <select id="selectAccessNum" resultType="integer">
+        SELECT
+            req_num
+        FROM
+            `zyc_access`;
+    </select>
+</mapper>

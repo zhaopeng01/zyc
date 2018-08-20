@@ -1,6 +1,7 @@
 package com.zyc.controller;
 
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.zyc.entity.ZycArticle;
 import com.zyc.resultTemplate.ResultGenerator;
 import com.zyc.service.ZycArticleService;
@@ -34,6 +35,33 @@ public class ZycArticleController {
 
     @Autowired
     private ZycArticleService zycArticleService;
+
+    /**
+     * @Description: 查询文章数量
+     * @author zhaopeng
+     * @email zp152527@163.com
+     * @date 2018/8/17 14:28
+     */
+    @ApiOperation(value = "根据id查询")
+    @GetMapping("/findDocNum")
+    public Object findDocNum() {
+        int count = zycArticleService.selectCount(new EntityWrapper<>());
+        return ResultGenerator.successResult(count);
+    }
+
+    /**
+     * @Description: 根据id查询
+     * @author zhaopeng
+     * @email zp152527@163.com
+     * @date 2018/8/17 14:28
+     */
+    @ApiOperation(value = "根据id查询")
+    @GetMapping("/findById")
+    public Object findById(Integer id) {
+        ZycArticle zycArticle = zycArticleService.selectById(id);
+        return ResultGenerator.successResult(zycArticle);
+    }
+
 
     /**
      * @Description: 获取首页列表

@@ -13,25 +13,31 @@ public class ResultGenerator {
 
 
     public static Result successResult() {
-        return successResult(new Date());
+        return new Result()
+                .setCode(ResultCodeEnum.SUCCESS.getCode())
+                .setMessage(DEFAULT_SUCCESS_MESSAGE)
+                .setResultDate(new Date());
     }
 
     public static <T> Result<T> successResult(T data) {
         return new Result()
                 .setCode(ResultCodeEnum.SUCCESS.getCode())
                 .setMessage(DEFAULT_SUCCESS_MESSAGE)
-                .setData(data);
+                .setData(data)
+                .setResultDate(new Date());
     }
 
     public static Result failResult(String message) {
         return new Result()
                 .setCode(ResultCodeEnum.FAIL.getCode())
-                .setMessage(message);
+                .setMessage(message)
+                .setResultDate(new Date());
     }
 
     public static Result unauthorizedResult() {
         return new Result()
                 .setCode(ResultCodeEnum.UNAUTHORIZED.getCode())
-                .setMessage("权限不足！");
+                .setMessage("权限不足！")
+                .setResultDate(new Date());
     }
 }
